@@ -64,7 +64,7 @@
     var popup = L.popup().setLatLng([39.2858,-76.6173]).setContent("Convention Center").openOn(map);
 
     var click_popup = L.popup(); //lat/lon of click
-    function onMapClick(e) {click_popup.setLatLng(e.latlng).setContent("You clicked the map at " + e.latlng.toString()).openOn(map)};
+    function onMapClick(e){click_popup.setLatLng(e.latlng).setContent("You clicked the map at " + e.latlng.toString()).openOn(map)};
     map.on('click', onMapClick);
 
 </script>
