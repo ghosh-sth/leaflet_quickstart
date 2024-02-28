@@ -43,6 +43,7 @@
         maxZoom: 15,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+    
     var marker = L.marker([39.2856, -76.5945]).addTo(map); //marker - Ekiben
     var circle = L.circle([39.2633, -76.5800], {
         color: 'black',
@@ -56,6 +57,11 @@
         [39.2683,-76.6150],
         [39.2804,-76.6158]
         ]).addTo(map); //polygon - Riverside/South Baltimore/Federal Hill-Montgomery
+    marker.bindPopup("Ekiben");
+    circle.bindPopup("Fort McHenry");
+    polygon.bindPopup("Some neighborhoods");
+
+    var popup = L.popup().setLatLng([39.2858,-76.6173]).setContent("Convention Center").openOn(map);
 </script>
 
 </body>
